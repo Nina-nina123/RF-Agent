@@ -25,7 +25,7 @@ Each book is parsed at the **subsection level** into self-contained conceptual u
 
 ## 🤖 Multi-Agent QTSA Distillation Pipeline
 
-![Multi-agent QTSA distillation pipeline([images/pipeline.png](https://github.com/Nina-nina123/RF_Agent/blob/main/Multi-agent%20QTSA%20distillation%20pipeline.png?raw=true))
+![Multi-agent QTSA distillation pipeline](../Multi-agent%20QTSA%20distillation%20pipeline.png)
 
 ## 📊 Dataset Statistics
 
