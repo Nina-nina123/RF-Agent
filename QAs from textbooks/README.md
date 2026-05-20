@@ -13,15 +13,15 @@ Both datasets are distilled from authoritative RF textbooks using a **multi-agen
 ## 📚 Corpus Source
 
 We extract content from **seven canonical RF textbooks**, covering:
-- *Microwave Engineering* by David M. Pozar
-- *RF and Microwave Power Amplifier Design* by Andrei Grebennikov
-- *RF Microelectronics* by Behzad Razavi
-- *RF Power Amplifiers* by Marian K. Kazimierczuk
-- *RF Power Amplifiers for Wireless Communications* by Steve C. Cripps,
-- *Advanced Techniques in RF Power Amplifier Design* by Steve C. Cripps
-- *RF Circuit Design: Theory & Applications* by Reinhold Ludwig
+- ***Microwave Engineering*** by David M. Pozar
+- ***RF and Microwave Power Amplifier Design*** by Andrei Grebennikov
+- ***RF Microelectronics*** by Behzad Razavi
+- ***RF Power Amplifiers*** by Marian K. Kazimierczuk
+- ***RF Power Amplifiers for Wireless Communications*** by Steve C. Cripps,
+- ***Advanced Techniques in RF Power Amplifier Design*** by Steve C. Cripps
+- ***RF Circuit Design: Theory & Applications*** by Reinhold Ludwig
 
-Each book is parsed at the **subsection level** into self-contained conceptual units.  
+Each book is parsed at the subsection level into self-contained conceptual units.  
 
 ## 🤖 Multi-Agent QTSA Distillation Pipeline
 
