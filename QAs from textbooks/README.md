@@ -10,6 +10,19 @@ We release two complementary datasets:
 
 Both datasets are distilled from authoritative RF textbooks using a **multi-agent pipeline**, forming the first open-source reasoning-oriented corpus for RFIC design.
 
+### File Description
+
+| File / Folder | Description |
+|----------------|-------------|
+| `train.py` | Main script for Supervised Fine-Tuning |
+| `inference.py` | RF reasoning inference using trained checkpoints |
+| `train.sh` | Training launcher script |
+| `config.yaml` | Hyperparameter configuration |
+| `dataset/` | RF QTSA training dataset |
+| `outputs/` | Fine-tuned checkpoints and exported models |
+| `logs/` | TensorBoard logs and training records |
+| `merge_lora.py` | Merge LoRA weights into base model |
+
 ## 📚 Corpus Source
 
 We extract content from **seven canonical RF textbooks**, covering:
