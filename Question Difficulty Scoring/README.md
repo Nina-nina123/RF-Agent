@@ -68,6 +68,22 @@ Most questions cluster at medium difficulty (3–4), with a meaningful tail of h
 
 The scoring is validated against model accuracy on the same test bank. **If the score is meaningful, accuracy should decrease monotonically as difficulty increases.**
 
+### Qwen models 
+| Variant | Diff2 | Diff3 | Diff4 | Diff5 | Overall |
+|---------|-------|-------|-------|-------|---------|
+| Qwen3-0.6B-T | 66.8% | 67.4% | 59.0% | 49.3% | 60.6% |
+| Qwen3-0.6B-NT | 68.1% | 65.2% | 58.7% | 49.3% | 60.3% |
+| Qwen3-1.7B-T | 72.0% | 75.7% | 63.5% | 58.9% | 67.5% |
+| Qwen3-1.7B-NT | 72.4% | 69.0% | 62.0% | 50.7% | 63.5% |
+| Qwen3-4B-T | 86.6% | 84.4% | 79.0% | 72.6% | 80.7% |
+| Qwen3-4B-NT | 84.5% | 80.6% | 70.7% | 72.6% | 77.1% |
+| finetuned-Qwen3-0.6B-T | 76.7% | 70.9% | 68.9% | 52.8% | 67.3% |
+| finetuned-Qwen3-0.6B-NT | 72.1% | 72.6% | 63.9% | 52.8% | 65.4% |
+| finetuned-Qwen3-1.7B-T | 81.7% | 77.3% | 74.3% | 58.9% | 73.1% |
+| finetuned-Qwen3-1.7B-NT | 78.2% | 75.4% | 69.2% | 55.1% | 69.5% |
+| finetuned-Qwen3-4B-T | 89.1% | 87.4% | 80.9% | 65.8% | 80.8% |
+| finetuned-Qwen3-4B-NT | 86.5% | 84.8% | 80.0% | 62.5% | 78.5% |
+
 ### Llama models 
 | Variant | Diff2 | Diff3 | Diff4 | Diff5 | Overall |
 |---------|-------|-------|-------|-------|---------|
