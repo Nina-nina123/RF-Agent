@@ -2,6 +2,15 @@
 
 This module assigns a difficulty score (1–5) to each multiple-choice question in the RFIC textbook test bank and validates whether the score correlates with LLM accuracy across small, medium, and frontier models.
 
+## File Description
+
+| File / Folder | Description |
+|----------------|-------------|
+| `build_score.ipynb` | Using a scoring methodology to get difficulty of each question in testbench |
+| `build_type.ipynb` | Getting ordered categorization of each question in testbench |
+| `score_vs_accuracy.ipynb` | Comparison of accuracy and scores of testbench for Llama, Qwen and commercial models |
+| `testbench_type&score.jsonl` | Testbench and corresponding type and score |
+| `testbench_type.jsonl` | Testbench and corresponding type |
 
 ## Scoring Methodology
 
