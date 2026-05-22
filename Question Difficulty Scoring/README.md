@@ -11,6 +11,7 @@ This module assigns a difficulty score (1–5) to each multiple-choice question 
 | `score_vs_accuracy.ipynb` | Comparison of accuracy and scores of testbench for Llama, Qwen and commercial models |
 | `testbench_type&score.jsonl` | Testbench and corresponding type and score |
 | `testbench_type.jsonl` | Testbench and corresponding type |
+| `types_vs_accuracy.ipynb` | Comparison of accuracy and types of testbench for Llama, Qwen and commercial models |
 
 ## Scoring Methodology
 
