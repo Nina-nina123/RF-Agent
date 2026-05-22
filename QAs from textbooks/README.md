@@ -14,14 +14,11 @@ Both datasets are distilled from authoritative RF textbooks using a **multi-agen
 
 | File / Folder | Description |
 |----------------|-------------|
-| `train.py` | Main script for Supervised Fine-Tuning |
-| `inference.py` | RF reasoning inference using trained checkpoints |
-| `train.sh` | Training launcher script |
-| `config.yaml` | Hyperparameter configuration |
-| `dataset/` | RF QTSA training dataset |
-| `outputs/` | Fine-tuned checkpoints and exported models |
-| `logs/` | TensorBoard logs and training records |
-| `merge_lora.py` | Merge LoRA weights into base model |
+| `dataset&benchmark/` | Collection of mcQTSA, ndQTSA and RF-benchmark |
+| `get_nodes.ipynb` | Getting subsections through data distillation from RF textbooks |
+| `mcQTSA_generation.ipynb` | Getting mcQTSA from subsections |
+| `ndQTSA_generation.ipynb` | Getting ndQTSA from subsections |
+| `node.jsonl` | file of subsections |
 
 ## 📚 Corpus Source
 
