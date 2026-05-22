@@ -18,7 +18,7 @@ Both datasets are distilled from authoritative RF textbooks using a **multi-agen
 | `get_nodes.ipynb` | Getting subsections through data distillation from RF textbooks |
 | `mcQTSA_generation.ipynb` | Getting mcQTSA from subsections |
 | `ndQTSA_generation.ipynb` | Getting ndQTSA from subsections |
-| `node.jsonl` | file of subsections |
+| `node.jsonl` | File of subsections |
 
 ## 📚 Corpus Source
 
