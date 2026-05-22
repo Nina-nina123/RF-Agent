@@ -9,13 +9,11 @@ Each question starts at **2.5**, then adjusted by six factors: length, formula c
 
 ## Score Distribution of Testbench (1000 questions)
 
-| Score | Count | % |
-|---|---|---|
-| 1 | 1 | 0.1% |
-| 2 | 232 | 23.2% |
-| 3 | 423 | 42.3% |
-| 4 | 271 | 27.1% |
-| 5 | 73 | 7.3% |
+
+| Score | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Count | 1 | 232 | 423 | 271 | 73 |
+| Ratio | 0.1% | 23.2% | 42.3% | 27.1% | 7.3% |
 
 Most questions cluster at medium difficulty (3–4), with a meaningful tail of harder questions at 5. Score 1 is effectively unused given RFIC textbook content rarely contains trivial recall.
 
