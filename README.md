@@ -32,9 +32,9 @@ language agents by combining:
 | Folder | Description |
 |---|---|
 | [`QAs from textbooks/`](./QAs%20from%20textbooks) | RF corpus construction, multi-agent QTSA distillation pipeline, mcQTSA / ndQTSA generation, and release of the dataset & benchmark. |
-| [`SFT/`](./SFT) | Supervised fine-tuning experiments on the QTSA dataset across the Qwen3 (0.6B / 1.7B / 4B & Thinking / NoThinking) and Llama-3.2 (1B / 3B, base & instruct) families. |
-| [`RAG/`](./RAG) | Retrieval-augmented generation pipelines and evaluation: basic, hybrid, hit-and-miss, and DeepSeek / GPT testing scripts on the RF knowledge base. |
 | [`Question difficulty scoring & categorization/`](./Question%20difficulty%20scoring%20%26%20categorization) | Question difficulty scoring (1–5) and question-type categorization for the benchmark, plus accuracy-vs-difficulty / accuracy-vs-type validation across all evaluated models. |
+| [`RAG/`](./RAG) | Retrieval-augmented generation pipelines and evaluation: basic, hybrid, hit-and-miss, and DeepSeek / GPT testing scripts on the RF knowledge base. |
+| [`SFT/`](./SFT) | Supervised fine-tuning experiments on the QTSA dataset across the Qwen3 (0.6B / 1.7B / 4B & Thinking / NoThinking) and Llama-3.2 (1B / 3B, base & instruct) families. |
 | `Hybrid RAG pipeline for RF knowledge retrieval.png` | Hybrid RAG pipeline figure (Fig. 3 in the paper), illustrates the BM25 + BGE-M3 + RRF + BGE-ReRanker-V2-M3 retrieval flow over the RF knowledge base. |
 | `Multi-agent QTSA distillation pipeline.png` | Multi-agent QTSA distillation pipeline (Fig. 1 in the paper). |
 
