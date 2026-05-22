@@ -138,7 +138,7 @@ derivation (type 4)** is consistently the hardest category. RAG helps
 most on knowledge-heavy types, while SFT helps most on conceptual and
 design questions.
 
-See [`Question Difficulty Scoring/`](./Question%20Difficulty%20Scoring)
+See [`Question difficulty scoring & categorization/`](./Question%20difficulty%20scoring%20%26%20categorization)
 for the scoring methodology, the `testbench_type&score.jsonl` file, and
 the analysis among difficulty, categorization and accuracy.
 
