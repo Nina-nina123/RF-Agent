@@ -35,7 +35,9 @@ language agents by combining:
 | [`SFT/`](./SFT) | Supervised fine-tuning experiments on the QTSA dataset across the Qwen3 (0.6B / 1.7B / 4B & Thinking / NoThinking) and Llama-3.2 (1B / 3B, base & instruct) families. |
 | [`RAG/`](./RAG) | Retrieval-augmented generation pipelines and evaluation: basic, hybrid, hit-and-miss, and DeepSeek / GPT testing scripts on the RF knowledge base. |
 | [`Question difficulty scoring & categorization/`](./Question%20difficulty%20scoring%20%26%20categorization) | Question difficulty scoring (1–5) and question-type categorization for the benchmark, plus accuracy-vs-difficulty / accuracy-vs-type validation across all evaluated models. |
-| `Multi-agent QTSA distillation pipeline.png` | Pipeline figure (Fig. 1 in the paper). |
+| `Hybrid RAG pipeline for RF knowledge retrieval.png` | Hybrid RAG pipeline figure (Fig. 3 in the paper), illustrates the BM25 + BGE-M3 + RRF + BGE-ReRanker-V2-M3 retrieval flow over the RF knowledge base. |
+| `Multi-agent QTSA distillation pipeline.png` | Multi-agent QTSA distillation pipeline (Fig. 1 in the paper). |
+
 
 ---
 
@@ -66,31 +68,7 @@ notebooks and the released `dataset&benchmark/` directory.
 
 ---
 
-## 2. RF Retrieval-Augmented Generation
-
-The RAG module grounds model responses in an authoritative external RF
-knowledge base:
-
-- **950** RF-related peer-reviewed papers
-- **10** canonical RF textbooks
-- Diagram-aware multimodal retrieval — schematics, Smith charts,
-  S-parameter plots, and block diagrams are converted to structured
-  textual descriptions and indexed alongside text chunks.
-
-Three retrieval configurations are systematically compared:
-
-- **Semantic retrieval** (BGE-M3 embeddings + ChromaDB)
-- **Keyword retrieval** (BM25)
-- **Hybrid retrieval** (Reciprocal Rank Fusion + BGE-ReRanker-V2-M3)
-
-Experiments show that **semantic retrieval consistently outperforms
-keyword and hybrid retrieval** for RF reasoning, e.g. raising GPT-4o from
-89.6% → 93.0% and DeepSeek-V3.2-T from 89.1% → 93.7% on the RF
-benchmark. See [`RAG/`](./RAG).
-
----
-
-## 3. Domain Adaptation via Supervised Fine-Tuning
+## 2. Domain Adaptation via Supervised Fine-Tuning
 
 We fine-tune across two model families spanning 0.6B–4B parameters with
 both base and instruction-tuned variants, in both thinking and
@@ -120,6 +98,97 @@ Key findings:
 
 See [`SFT/`](./SFT) for fine-tuning notebooks and per-model evaluation
 scripts.
+
+---
+
+## 3. RF Retrieval-Augmented Generation
+
+The RAG module grounds model responses in an authoritative external RF
+knowledge base:
+
+- **950** RF-related peer-reviewed papers
+- **10** canonical RF textbooks
+- Diagram-aware multimodal retrieval — schematics, Smith charts,
+  S-parameter plots, and block diagrams are converted to structured
+  textual descriptions and indexed alongside text chunks.
+
+Three retrieval configurations are systematically compared:
+
+- **Semantic retrieval** (BGE-M3 embeddings + ChromaDB)
+- **Keyword retrieval** (BM25)
+- **Hybrid retrieval** (Reciprocal Rank Fusion + BGE-ReRanker-V2-M3)
+
+Experiments show that **semantic retrieval consistently outperforms
+keyword and hybrid retrieval** for RF reasoning, e.g. raising GPT-4o from
+89.6% → 93.0% and DeepSeek-V3.2-T from 89.1% → 93.7% on the RF
+benchmark. See [`RAG/`](./RAG).
+
+
+### **Evaluation of State-of-the-Art LLMs With and Without RAG**
+
+| Model | No RAG | Semantic | Keyword | Hybrid |
+|-------|--------|----------|---------|--------|
+| GPT-4o | 89.6% | 93.0% | 92.1% | 91.2% |
+| DeepSeek-V3.2-T | 89.1% | 93.7% | 93.0% | 91.6% |
+
+### **Hit-and-Miss Retrieval Validation Across Model Sizes**
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th colspan="2">Semantic RAG</th>
+      <th colspan="2">Keyword RAG</th>
+      <th colspan="2">Hybrid RAG</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Hit</th>
+      <th>Miss</th>
+      <th>Hit</th>
+      <th>Miss</th>
+      <th>Hit</th>
+      <th>Miss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Qwen3-0.6B-T</td>
+      <td><strong>81%</strong></td>
+      <td>65%</td>
+      <td><strong>74%</strong></td>
+      <td>73%</td>
+      <td><strong>71%</strong></td>
+      <td>65%</td>
+    </tr>
+    <tr>
+      <td>Qwen3-1.7B-T</td>
+      <td><strong>84%</strong></td>
+      <td>75%</td>
+      <td><strong>80%</strong></td>
+      <td>75%</td>
+      <td><strong>80%</strong></td>
+      <td>75%</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B-T</td>
+      <td><strong>92%</strong></td>
+      <td>83%</td>
+      <td><strong>86%</strong></td>
+      <td>82%</td>
+      <td><strong>85%</strong></td>
+      <td>80%</td>
+    </tr>
+    <tr>
+      <td><strong>Avg. Δ</strong></td>
+      <td colspan="2"><strong>+10.3%</strong></td>
+      <td colspan="2"><strong>+3.3%</strong></td>
+      <td colspan="2"><strong>+5.0%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+![Hybrid RAG pipeline for RF knowledge retrieval](./Hybrid%20RAG%20pipeline%20for%20RF%20knowledge%20retrieval.png)
 
 ---
 
