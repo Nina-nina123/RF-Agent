@@ -73,3 +73,52 @@ The scoring is validated against model accuracy on the same test bank. **If the 
 All 6 big-model variants are **strictly monotonically decreasing** from Diff 2 → Diff 5.
 
 
+## Validation: Accuracy vs. Categorization
+
+For validation, we assigned a numeric label to each question type for easier reference in later analysis.
+
+During the experiment, we find that: Mathematical derivation (type4) is the hardest type for all models. Scaling, fine-tuning, RAG, and thinking mode all help, with the largest improvements on type4. RAG excels at knowledge-heavy types, while fine-tuning works best for conceptual and design questions.
+
+| Application & Limitations | Conceptual Understanding | Design Implementation | Mathematical Derivation | Performance Analysis |
+|---|---|---|---|---|
+| type1 | type2 | type3 | type4 | type5 |
+
+### Qwen models 
+
+| Variant | type1 | type2 | type3 | type4 | type5 | Overall |
+|-------|-------|-------|-------|-------|-------|---------|
+| Qwen3-0.6B-T | 67.0% | 62.9% | 68.6% | 57.1% | 62.1% | 63.5% |
+| Qwen3-0.6B-NT | 67.5% | 65.0% | 68.1% | 51.8% | 61.6% | 62.8% |
+| Qwen3-1.7B-T | 75.8% | 72.6% | 73.4% | 59.7% | 69.7% | 70.2% |
+| Qwen3-1.7B-NT | 74.7% | 68.5% | 69.1% | 55.5% | 64.5% | 66.5% |
+| Qwen3-4B-T | 86.6% | 85.3% | 83.6% | 75.9% | 81.5% | 82.6% |
+| Qwen3-4B-NT | 83.0% | 81.6% | 83.1% | 68.1% | 75.4% | 78.2% |
+| finetuned-Qwen3-0.6B-T | 75.3% | 72.6% | 73.9% | 56.8% | 72.4% | 70.2% |
+| finetuned-Qwen3-0.6B-NT | 71.9% | 70.8% | 70.7% | 58.7% | 70.3% | 68.5% |
+| finetuned-Qwen3-1.7B-T | 80.3% | 80.1% | 80.9% | 64.6% | 74.4% | 76.1% |
+| finetuned-Qwen3-1.7B-NT | 74.0% | 75.5% | 76.1% | 64.6% | 73.6% | 72.8% |
+| finetuned-Qwen3-4B-T | 90.1% | 88.2% | 85.5% | 74.7% | 82.9% | 84.3% |
+| finetuned-Qwen3-4B-NT | 87.3% | 86.6% | 82.9% | 70.3% | 83.9% | 82.2% |
+
+### Llama models 
+| Variant | type1 | type2 | type3 | type4 | type5 | Overall |
+|-------|-------|-------|-------|-------|-------|---------|
+| Llama3.2-1B-Base | 23.5% | 33.3% | 33.0% | 25.3% | 26.2% | 28.3% |
+| Llama3.2-1B-Instruct  | 34.6% | 34.2% | 36.6% | 39.4% | 30.7% | 35.1% |
+| Llama3.2-3B-Base | 69.4% | 70.7% | 64.6% | 65.1% | 57.9% | 65.5% |
+| Llama3.2-3B-Instruct | 74.7% | 76.1% | 77.8% | 59.3% | 68.7% | 71.3% |
+| finetuned-Llama3.2-1B-Base | 62.0% | 56.9% | 53.9% | 45.3% | 55.0% | 54.6% |
+| finetuned-Llama3.2-1B-Instruct | 66.0% | 59.4% | 56.0% | 53.9% | 61.1% | 59.3% |
+| finetuned-Llama3.2-3B-Base  | 74.7% | 76.0% | 72.8% | 58.6% | 73.1% | 71.0% |
+| finetuned-Llama3.2-3B-Instruct | 79.4% | 78.6% | 78.7% | 57.4% | 79.5% | 74.7% |
+
+### Per-variant detail (big models)
+
+| Variant | type1 | type2 | type3 | type4 | type5 | Overall |
+|-------|-------|-------|-------|-------|-------|---------|
+| DeepSeek (no RAG) | 90.7% | 92.4% | 88.9% | 83.2% | 89.6% | 89.0% |
+| DeepSeek + Basic RAG | 99.0% | 95.9% | 94.2% | 87.4% | 91.9% | 93.7% |
+| DeepSeek + Hybrid RAG | 94.3% | 93.4% | 93.7% | 85.9% | 90.5% | 91.6% |
+| GPT-4o (no RAG) | 92.3% | 90.9% | 93.7% | 79.6% | 91.0% | 89.6% |
+| GPT-4o + Basic RAG | 95.9% | 93.4% | 92.8% | 89.0% | 93.8% | 93.0% |
+| GPT-4o + Hybrid RAG | 95.4% | 92.4% | 93.7% | 85.9% | 88.6% | 91.2% |
