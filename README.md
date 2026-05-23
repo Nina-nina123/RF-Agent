@@ -63,7 +63,7 @@ Features:
 - A standardized **1,000-question RF multiple-choice benchmark** carved
   from the held-out mcQTSA subset.
 
-See [`QAs from textbooks/`](./QAs%20from%20textbooks) for the construction
+See `QAs from textbooks/`for the construction
 notebooks and the released `dataset&benchmark/` directory.
 
 ---
@@ -96,7 +96,7 @@ Key findings:
   faster post-tuning inference.
 - Gains diminish for larger, already-strong models.
 
-See [`SFT/`](./SFT) for fine-tuning notebooks and per-model evaluation
+See `SFT/` for fine-tuning notebooks and per-model evaluation
 scripts.
 
 ---
@@ -121,7 +121,7 @@ Three retrieval configurations are systematically compared:
 Experiments show that **semantic retrieval consistently outperforms
 keyword and hybrid retrieval** for RF reasoning, e.g. raising GPT-4o from
 89.6% → 93.0% and DeepSeek-V3.2-T from 89.1% → 93.7% on the RF
-benchmark. See [`RAG/`](./RAG).
+benchmark. See `RAG/`.
 
 
 ### **Evaluation of State-of-the-Art LLMs With and Without RAG**
@@ -207,7 +207,7 @@ derivation (type 4)** is consistently the hardest category. RAG helps
 most on knowledge-heavy types, while SFT helps most on conceptual and
 design questions.
 
-See [`Question difficulty scoring & categorization/`](./Question%20difficulty%20scoring%20%26%20categorization)
+See `Question difficulty scoring & categorization/`
 for the scoring methodology, the `testbench_type&score.jsonl` file, and
 the analysis among difficulty, categorization and accuracy.
 
