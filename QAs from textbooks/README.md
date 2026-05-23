@@ -22,6 +22,8 @@ Specifically:
 
 - **Format normalization and correction:** Parts of generated outputs were manually checked and corrected for formatting inconsistencies, including malformed JSON structures, incomplete QTSA fields, incorrect option formatting, and structural deviations from the target schema.
 
+- **Spot-checking of theoretical validity in testbench:** 200 samples from testbench were randomly selected for detailed manual verification. The checking process, conducted by individuals with graduate-level domain knowledge, focused on the logical coherence of reasoning traces, the correctness of final answers, and the consistency of each QTSA with the source textbook content, helping to ensure that automated generation does not compromise theoretical reliability.
+
 These human quality assurance steps complement the automated multi-agent distillation pipeline and help ensure higher dataset consistency, reasoning quality, and benchmark reliability.
 
 ## File Description
