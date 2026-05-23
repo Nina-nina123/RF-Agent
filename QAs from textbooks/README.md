@@ -10,6 +10,20 @@ We release two complementary datasets:
 
 Both datasets are distilled from authoritative RF textbooks using a **multi-agent pipeline**, forming the first open-source reasoning-oriented corpus for RFIC design.
 
+### Human Quality Control
+
+Although the QTSA generation pipeline is largely automated, we further introduced manual quality control procedures to improve dataset reliability and consistency.
+
+Specifically:
+
+- **Manual inspection of generated samples:** Thousands of QTSA samples were manually reviewed to identify formatting issues, invalid reasoning traces, and generation failures.
+
+- **Semantic subdivision of overly long nodes:** Source textbook sections that were excessively long or contained multiple independent concepts were manually divided into semantically coherent units before QTSA generation, improving reasoning granularity and retrieval quality.
+
+- **Format normalization and correction:** Parts of generated outputs were manually checked and corrected for formatting inconsistencies, including malformed JSON structures, incomplete QTSA fields, incorrect option formatting, and structural deviations from the target schema.
+
+These human quality assurance steps complement the automated multi-agent distillation pipeline and help ensure higher dataset consistency, reasoning quality, and benchmark reliability.
+
 ## File Description
 
 | File / Folder | Description |
