@@ -15,5 +15,5 @@ For the size of files, we divide them into smaller files, like xxx(1).jsonl.
 |----------------|-------------|
 | `mcQTSA_dataset_devision.ipynb` | Dividing mcQTSA into train dataset, validation dataset and 1000-question benchmark<br>Giving each question of benchmark original ID (getting their categorization) |
 | `QTSA_dataset_devision.ipynb` | Dividing ndQTSA into train dataset and validation dataset<br>merge mcQTSA and ndQTSA into mixed dataset |
-| `mcQTSA_new4.jsonl` | Final version of mcQTSA dataset |
-| `QTSA_new1.jsonl` | Final version of ndQTSA dataset |
+| `mcQTSA_new4/` | Final version of mcQTSA dataset |
+| `QTSA_new1/` | Final version of ndQTSA dataset |
