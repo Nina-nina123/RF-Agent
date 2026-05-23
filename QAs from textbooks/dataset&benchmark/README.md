@@ -7,7 +7,7 @@ This document describes the processing of raw QTSA and benchmark. Processed data
 - /SFT/Qwen3-0.6B/validation_QTSA_mix
 - /SFT/Qwen3-0.6B/testbench
 
-For the size of files, we divide them into smaller files, like xxx(1).jsonl.
+For the size of files, we divide them into smaller files, like `xxx(1).jsonl`, and saved in united folder, like `xxx/`.
 
 ## File Description
 
