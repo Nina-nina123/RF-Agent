@@ -1,6 +1,8 @@
 # Question Difficulty Scoring & Validation
 
-This module assigns a difficulty score (1–5) to each multiple-choice question in the RFIC textbook test bank and validates whether the score correlates with LLM accuracy across small, medium, and frontier models.
+This module assigns a difficulty score (1–5) to each multiple-choice question in the RFIC textbook test bank and validates whether the score correlates with LLM accuracy across small, medium, and frontier models. 
+
+To ensure annotation reliability, we additionally perform **manual validation** on difficulty scoring and question type classification. **20% samples** are manually reviewed to verify that difficulty levels appropriately reflect the required RF reasoning complexity and that reasoning-type assignments remain semantically consistent and well aligned with question intent.
 
 ## File Description
 
