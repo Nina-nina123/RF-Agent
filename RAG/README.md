@@ -67,7 +67,10 @@ Notebooks:
 ## Shared testbench
 
 All experiment notebooks are intended to use the same testbench dataset:
-
 - `testbench/mcQTSA_test_final.jsonl`
-
 Replace the notebook's `INPUT_FILE` path with the above path corresponding to that file in the repository.
+
+## Vector database creation
+
+The Chroma vector database is created through the notebook:
+- `create_vectordb.ipynb`
