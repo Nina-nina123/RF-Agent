@@ -211,4 +211,21 @@ See `Question difficulty scoring & categorization/`
 for the scoring methodology, the `testbench_type&score.jsonl` file, and
 the analysis among difficulty, categorization and accuracy.
 
+## 5. Worked Examples
 
+To make the dataset format and retrieval behavior concrete, the `examples/`
+folder provides two end-to-end, human-readable walkthroughs that mirror the
+illustrative figures in the paper:
+
+- **mcQTSA reasoning sample** — a complete Question–Thinking–Solution–Answer
+  quadruple (SSB mixer spur analysis) showing the multi-step reasoning format
+  used for both supervised fine-tuning and benchmark evaluation.
+- **RAG hit-vs-miss case** — a single-turn inductor self-inductance question
+  showing how the top-3 retrieved chunks (hit) yield the correct answer while
+  lower-ranked chunks (miss) lead the model astray — the qualitative
+  counterpart to the hit/miss validation in Section 3.
+
+Each example links back to the exact released data files it was drawn from, so
+the samples can be inspected, reproduced, or extended directly.
+
+See [`examples/`](https://github.com/Nina-nina123/RF-Agent/blob/main/examples) for the full walkthroughs and figures.
