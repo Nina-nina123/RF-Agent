@@ -107,7 +107,7 @@ The RAG module grounds model responses in an authoritative external RF
 knowledge base:
 
 - **950** RF-related peer-reviewed papers
-- **10** canonical RF textbooks
+- **7** canonical RF textbooks
 - Diagram-aware multimodal retrieval — schematics, Smith charts,
   S-parameter plots, and block diagrams are converted to structured
   textual descriptions and indexed alongside text chunks.
