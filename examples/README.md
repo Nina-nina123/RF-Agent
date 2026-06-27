@@ -11,7 +11,9 @@ the released data it was drawn from.
 
 ## 1. Representative mcQTSA Sample — SSB Mixer Spur Analysis
 
-![mcQTSA example: SSB mixer spur analysis](QTSA_example.png)
+<p align="center">
+  <img src="QTSA_example.png" width="600" alt="mcQTSA example: SSB mixer spur analysis">
+</p>
 
 The figure shows one complete Question–Thinking–Solution–Answer sample. The same
 format is used as supervised training data and, in its multiple-choice form, as
@@ -43,7 +45,9 @@ substantial filtering.
 
 ## 2. Representative RAG Hit-vs-Miss Case — Single-Turn Inductor Self-Inductance
 
-![RAG hit-vs-miss example: single-turn inductor self-inductance](hit_miss.png)
+<p align="center">
+  <img src="hit_miss.png" width="600" alt="RAG hit-vs-miss example: single-turn inductor self-inductance">
+</p>
 
 This example illustrates the hit/miss validation used to confirm that accuracy
 gains stem from retrieval quality rather than incidental context injection. For
